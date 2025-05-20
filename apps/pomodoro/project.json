@@ -1,10 +1,10 @@
 {
-  "root": "apps/pomodoro",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/pomodoro/src",
   "projectType": "application",
   "targets": {
     "build": {
-      "executor": "@nrwl/web:webpack",
+      "executor": "@nrwl/webpack:webpack",
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
@@ -38,7 +38,7 @@
       }
     },
     "serve": {
-      "executor": "@nrwl/web:dev-server",
+      "executor": "@nrwl/webpack:dev-server",
       "options": {
         "buildTarget": "pomodoro:build",
         "hmr": true
@@ -59,9 +59,9 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/pomodoro"],
+      "outputs": ["{workspaceRoot}/coverage/apps/pomodoro"],
       "options": {
-        "jestConfig": "apps/pomodoro/jest.config.js",
+        "jestConfig": "apps/pomodoro/jest.config.ts",
         "passWithNoTests": true
       }
     }

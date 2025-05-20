@@ -4,5 +4,6 @@
     "pomodoro": "apps/pomodoro",
     "pomodoro-e2e": "apps/pomodoro-e2e",
     "ui-kits": "libs/ui-kits"
-  }
+  },
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json"
 }
